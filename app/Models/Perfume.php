@@ -2,43 +2,28 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+class Perfume extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    use HasFactory;
+    // use SoftDeletes;
+    
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'image__path',
+        'category_id'
     ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    
+    // public function getPaginateByLimit(int $limit_count = 5)
+    // {
+    //     return $this::with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
+    // }
+    // public function category()
+    // {
+    //     return $this->belongsTo(Category::class);
+    // }
+    
 }
