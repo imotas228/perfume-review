@@ -11,8 +11,10 @@
         <div class='reviews'>
             @foreach ($reviews as $review)
                 <div class='review'>
-                    <h2 class='title'>{{ $review->title }}</h2>
-                    <p class='body'>{{ $review->body }}</p>
+                    <h2 class='brand'>
+                        <a href="/reviews/{{ $review->id }}">{{ $review->brand }}</a>
+                    </h2>
+                    <p class='goods'>{{ $review->goods }}</p>
                 </div>
             @endforeach
         </div>
