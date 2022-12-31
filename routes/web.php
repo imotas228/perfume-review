@@ -17,4 +17,4 @@ use App\Http\Controllers\PerfumeController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/posts',[PerfumeController::class, 'index']);
+Route::get('/', [PerfumeController::class, 'index']);
