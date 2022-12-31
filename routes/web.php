@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\PerfumepostController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +15,7 @@ use App\Http\Controllers\PerfumepostController;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
-Route::get('/', [PerfumeController::class, 'index']);
-=======
-
-Route::get('/posts', [PerfumepostController::class, 'index']);
-
->>>>>>> refs/remotes/origin/master
+Route::get('/', [ReviewController::class, 'index']);
