@@ -18,4 +18,5 @@ use App\Http\Controllers\ReviewController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', [ReviewController::class, 'index']);
+Route::get('/', [ReviewController::class, 'perfume']);
+Route::get('/reviews/{review}', [ReviewController::class ,'brand']);
