@@ -18,6 +18,10 @@ use App\Http\Controllers\PerfumepostController;
 /*Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
+Route::get('/', [PerfumeController::class, 'index']);
+=======
 
 Route::get('/posts', [PerfumepostController::class, 'index']);
 
+>>>>>>> refs/remotes/origin/master
