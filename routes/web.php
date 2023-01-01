@@ -19,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', [ReviewController::class, 'perfume']);
+Route::get('/reviews/create', [ReviewController::class, 'create']);
 Route::get('/reviews/{review}', [ReviewController::class ,'brand']);
+Route::get('/reviews', [ReviewController::class, 'store']);

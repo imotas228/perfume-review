@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>Perfume review</h1>
+        <a href='/reviews/create'>create</a>
         <div class='reviews'>
             @foreach ($reviews as $review)
                 <div class='review'>
@@ -17,6 +18,9 @@
                     <p class='goods'>{{ $review->goods }}</p>
                 </div>
             @endforeach
+        </div>
+        <div class='paginate'>
+            {{ $reviews->links() }}
         </div>
     </body>
 </html>

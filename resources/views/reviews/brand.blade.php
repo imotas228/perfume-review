@@ -8,13 +8,13 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1 class="title">
+        <h1 class="brand">
             {{ $review->brand }}
         </h1>
         <div class="content">
             <div class="content__review">
-                <h3>口コミ</h3>
-                <p>{{ $review->goods }}</p>    
+                <p>{{ $review->goods }}</p> 
+                <!--<p>口コミ</p>-->
             </div>
         </div>
         <div class="footer">
