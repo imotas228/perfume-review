@@ -9,8 +9,12 @@ class Review extends Model
 {
     use HasFactory;
     
-    public function getByLimit(int $limit_count = 5)
+    public function getPaginateByLimit(int $limit_count = 5)
     {
-        return $this->orderBy('updated_at', 'DESC')->limit($limit_count)->get();
+        return $this->orderBy('updated_at', 'ASC')->paginate($limit_count);
     }
+    protected $fillable = [
+        'brand',
+        'goods',
+    ];
 }
