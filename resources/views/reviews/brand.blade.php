@@ -18,6 +18,7 @@
             </div>
         </div>
         <div class="footer">
+            <div class="edit"><a href="/reviews/{{ $review->id }}/edit">編集</a></div>
             <a href="/">戻る</a>
         </div>
     </body>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
-// use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Http\Requests\ReviewRequest;
 
 class ReviewController extends Controller
@@ -21,10 +21,21 @@ class ReviewController extends Controller
     {
         return view('reviews/create');
     }
-    public function store(Review $review, ReviewRequest $request)
+    public function store(Request $request, Review $review)
     {
         $input = $request['review']; //$requestのキーはHTMLのFormタグ内で定義した各入力項目のname属性と一致
         $review->fill($input)->save();
+        return redirect('/reviews/' . $review->id);
+    }
+    public function edit(Review $review)
+    {
+        return view('reviews/edit')->with(['review' => $review]);
+    }
+    public function update(ReviewRequest $request, Review $review)
+    {
+        $input_review = $request['review'];
+        $review->fill($input_review)->save();
+        
         return redirect('/reviews/' . $review->id);
     }
 }
