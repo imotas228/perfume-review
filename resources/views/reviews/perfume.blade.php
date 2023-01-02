@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Perfume review</h1>
-        <a href='/reviews/create'>ブランド追加</a>
+        <a href='/reviews/create'>香水追加</a>
         <div class='reviews'>
             @foreach ($reviews as $review)
                 <div class='review'>
