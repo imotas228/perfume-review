@@ -24,4 +24,6 @@ Route::get('/reviews/{review}', [ReviewController::class ,'brand']);
 Route::post('/reviews', [ReviewController::class, 'store']);
 Route::get('/reviews/{review}/edit', [ReviewController::class, 'edit']);
 Route::put('/reviews/{review}', [ReviewController::class, 'update']);
+Route::delete('/reviews/{review}',[ReviewController::class,'delete']);
+
 
